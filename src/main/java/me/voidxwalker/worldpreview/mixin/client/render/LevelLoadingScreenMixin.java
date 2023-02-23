@@ -81,14 +81,10 @@ public abstract class LevelLoadingScreenMixin extends Screen {
             if (((WorldRendererMixin)WorldPreview.worldRenderer).getWorld()!=null) {
                 SaveProperties sp = Objects.requireNonNull(WorldPreview.world.getServer()).getSaveProperties();
                 if(sp.getLevelName().startsWith("Random")) {
-                    BlockPos spawnPos = WorldPreview.player.getBlockPos();
-                    Biome spawnBiome = WorldPreview.player.getEntityWorld().getBiome(spawnPos);
-                    if (!(spawnBiome instanceof BeachBiome)) {
-                        WorldPreview.inPreview = true;
-                        WorldPreview.kill = -1;
-                        WorldPreview.log(Level.INFO,"Auto resetting because no beach");
-                        return;
-                    }
+                    WorldPreview.inPreview = true;
+                    WorldPreview.kill = -1;
+                    WorldPreview.log(Level.INFO,"Auto resetting because it's not the vine seed");
+                    return;
                 }
                 KeyBinding.unpressAll();
                 WorldPreview.kill=0;
