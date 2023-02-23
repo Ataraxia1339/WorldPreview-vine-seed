@@ -2,7 +2,7 @@
 
 Minecraft mod that draws a preview of the world on the loading screen during chunk generation.
 - **Resets exclusively** for the vine seed
-- **Not legal** for the minecraft java esition leaderboards (but I'd be surprised if you get a run with it)
+- **Not legal** for the minecraft java edition leaderboards (but I'd be surprised if you get a run with it)
 
 ## Usage
 
